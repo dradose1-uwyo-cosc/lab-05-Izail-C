@@ -1,12 +1,7 @@
-# [Name]
-## [Assignment #]
-## [Submission date: MM/DD/YY]
+# Name: Izail Chamberlain
+## Assignment #: Lab 5
+## [Submission date: 10/08/24
 ## Worked with/sources 
-* example
-* example
-* example
-* example
+* Sam Clackler and Deacon Steiner and use of ChatGPT to clarify errors and semantics issues
 ## Project Quirks/ Things that don't work
-* example
-* example
-* example
+* N/A

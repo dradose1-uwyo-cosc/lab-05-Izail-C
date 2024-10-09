@@ -1,13 +1,10 @@
-# Your Name Here
+# Name: Izail Chamberlain
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
-
+# Submission Date: 10/08/24
+# Lab 05 
+# Lab Section: 11
+# Sources, people worked with, help given to: Sam Clackler and Deacon Steiner
+# Use of ChatGPT to clarify errors and semantic issues
 max_temps = [
     32, 24, 22, 25, 37, 33, 34, 40, 40, 42,
     35, 35, 47, 49, 37, 37, 35, 23, 26, 25,
@@ -45,9 +42,7 @@ max_temps = [
     38, 48, 50, 34, 37, 32, 36, 48, 52, 57,
     48, 34, 29, 39, 44, 39, 33, 40, 44, 55,
     51, 55, 55, 54, 53, 51, 43, 23, 20, 30,
-    35, 32, 41, 48, 44
-]
-
+    35, 32, 41, 48, 44]
 
 min_temps = [
     23, 14, 7, 11, 13, 22, 15, 21, 23, 31,
@@ -86,8 +81,7 @@ min_temps = [
     18, 16, 17, 13, 17, 21, 31, 30, 27, 23,
     17, 12, 18, 25, 24, 24, 14, 10, 20, 19,
     17, 28, 23, 25, 23, 23, -3, -15, 19, 5,
-    -1, -1, 11, 13
-]
+    -1, -1, 11, 13]
 
 # Leaving the two lists above UNSORTED, to MANUALLY find the max and min temps respectively
 # This will be done with looping, and if statements
@@ -95,20 +89,62 @@ min_temps = [
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
 
-print(f"Max temp = {max_temp}")
-print(f"Min temp = {min_temp}")
+max_temp = max_temps[0]
+min_temp = min_temps[0]       
 
+for temp in max_temps:
+    if temp > max_temp:
+        max_temp = temp
+
+for temp in min_temps:
+    if temp < min_temp:
+        min_temp = temp        
+
+print(f'') 
+print(f"Maximum Temperature = {max_temp} degrees")
+print(f"Minimum Temperature = {min_temp} degrees")
+print(f'')
 # Given the below list 
 numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, -25, 3, -10, -83, 63, 0, 13, -99, 87, -46, -88, -71, 4, -99, -15, -12, 72, -1, -20, -90, 32, -36, -59, 83, 78, 52, 43, 55, 12, 16, -37, -5, -98, -53]
 # Count how many positive numbers occur, how many negative numbers occur, and how many times 0 occurs
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
+positive_count = 0
+negative_count = 0
+zero_count = 0
+print(f'Results:')
+print(f'') 
+for num in numbers:
+    if num > 0:
+        positive_count += 1
+        print(f"{num} is positive")
+    elif num < 0:
+        negative_count += 1
+        print(f"{num} is negative")
+    else:
+        zero_count += 1
+        print(f"{num} is zero")
+print(f'')        
+print(f'Final Counts:')
+print(f'') 
+print(f'There are {positive_count} positive numbers')
+print(f'There are {negative_count} negative numbers')
 print(f"Zero occurred {zero_count} time(s)")
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
 
-print(f"Sum of positive numbers {pos_sum}")
-print(f"Sum of negative numbers {neg_sum}")
+positive_sum = 0
+negative_sum = 0
+
+for num in numbers:
+    if num > 0:
+        positive_sum += num
+    elif num < 0:
+        negative_sum += num
+
+print(f'') 
+print(f'Totals:')
+print(f'') 
+print(f"Sum of positive numbers {positive_sum}")
+print(f"Sum of negative numbers {negative_sum}")
